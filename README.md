@@ -9,7 +9,8 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 ## CHANGELOG
 
-* 20241031 - Nightly. Added option for druids and rangers to recognize Guril Berries and offer alternatives for Rose to consider.
+* 20241031 - Nightly. 
+(BG2EE) Added option for druids and rangers to recognize Guril Berries and offer alternatives for Rose to consider.
 
 ## FUTURE PLANS
 
