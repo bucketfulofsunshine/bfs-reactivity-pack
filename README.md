@@ -16,7 +16,7 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 * (BG1EE) Add an option in the Feldepost Inn to proclaim you're also a mage. No more *'You're a mage? We don't want trouble with a mage!'* We have a mage too! It's duel time!
 * (BG2EE) Add option for clerics of Lathander to recognize aspects of him in Amaunator. 
-* (BG2EE) Add option, if the player has more than X amount of gold and is rich, to comment as such in the Mithrest Inn. The nobles will still look down on you but, hey, at least you're rich!
+* (BG2EE) Add option, if the player has more than X amount of gold, to comment as such in the Mithrest Inn. The nobles will still look down on you but, hey, at least you're rich!
 
 ## LICENSING
 
