@@ -1,0 +1,20 @@
+BACKUP ~bfsreactivitypack/backup~
+SUPPORT ~bucketfulofsunshine on Discord~
+VERSION ~0.1~
+
+BEGIN ~Bucketfulofsunshine's Reactivity Pack~
+
+// CamDawg's code for State.ids
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+/* BEGIN ~BG1EE Reactivity Pack~
+REQUIRE_PREDICATE GAME_IS ~bgee~ ~This mod requires BGEE~ */
+
+BEGIN ~BG2EE Reactivity Pack~
+REQUIRE_PREDICATE GAME_IS ~bg2ee~ ~This mod requires BG2EE~
+
+// Dialogues
+COMPILE EVALUATE_BUFFER ~bfsreactivitypack/d/bg2ee.d~
+		
+
