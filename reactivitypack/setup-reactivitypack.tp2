@@ -1,0 +1,34 @@
+BACKUP ~reactivitypack/backup~
+SUPPORT ~bucketfulofsunshine on Discord~
+VERSION ~0.1~
+
+AUTO_TRA ~reactivitypack/translations/%s~ 
+
+LANGUAGE ~English~
+         ~english~   
+         ~reactivitypack/translations/english/JournalEntries.tra~
+
+// Basic BGEE Reactivity Pack
+BEGIN ~BGEE Reactivity Pack~
+REQUIRE_PREDICATE GAME_IS ~bgee~ ~This mod requires BGEE~ 
+
+ADD_JOURNAL TITLE (@100000) @100001 USING ~reactivitypack/translations/english/JournalEntries.tra~ 
+
+COMPILE EVALUATE_BUFFER ~reactivitypack/d/bgee.d~
+
+EXTEND_TOP ~AR2606.bcs~ ~reactivitypack/scripts/AR2606.baf~ 
+
+COPY ~reactivitypack/cre/BFSRattie.cre~ ~override/BFSRattie.cre~
+
+// Silly BGEE Pack~
+BEGIN ~BGEE 4th Wall Breaking Reactivity Pack~
+REQUIRE_PREDICATE GAME_IS ~bgee~ ~This mod requires BGEE~ 
+COMPILE EVALUATE_BUFFER ~reactivitypack/d/bgee4thwall.d~
+
+// Basic BG2EE Pack
+BEGIN ~BG2EE Reactivity Pack~
+REQUIRE_PREDICATE GAME_IS ~bg2ee~ ~This mod requires BG2EE~
+COMPILE EVALUATE_BUFFER ~reactivitypack/d/bg2ee.d~
+
+
+
