@@ -9,8 +9,21 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 ## CHANGELOG
 
-* 20241031 - Nightly. 
-(BG2EE) Added option for druids and rangers to recognize Guril Berries and offer alternatives for Rose to consider.
+20241031 - Nightly. 
+
+* (BG2EE) Added option for druids and rangers to recognize Guril Berries and offer alternatives for Rose to consider.
+
+20241107 - Nightly
+
+* (BGEE) Druid / Ranger can talk down Rats with Reevor (currently crashing / not fully working).
+
+* (BGEE) Mage CHARNAME can call Tranzig out.
+
+* (BGEE) Blackguard, Berserker, Barbarian or Half-Orc CHARNAME can intimidate Karlat.
+
+* (BGEE) Bard CHARNAME can ask to perform at the Friendly Arm Inn (need to expand to other inns & BG2EE).
+
+* (BGEE) [4th wall] Elf & Half-Elf CHARNAME can ask Winthrop about his clean inn comment.
 
 ## FUTURE PLANS
 
