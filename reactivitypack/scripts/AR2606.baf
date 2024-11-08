@@ -1,9 +1,0 @@
-IF
-Global("BFSSaveTheRatties","GLOBAL",1)
-Global("SPRITE_IS_DEADREVRAT","GLOBAL",5)
-THEN
-RESPONSE #100
-SetGlobal("BFSSaveTheRatties","GLOBAL",2)
-SetGlobal("SPRITE_IS_DEADREVRAT","GLOBAL",7)
-CreateCreature("BFSRattie",[234.249],1)
-END
