@@ -25,6 +25,16 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 * (BGEE) [4th wall] Elf & Half-Elf CHARNAME can ask Winthrop about his clean inn comment.
 
+20241108 - Nightly
+
+* (BGEE) Removed the ratties because they aren't playing nice. Reevor wins - for now.
+  
+* (BGEE) Wizard Slayers, Blackguards and Paladins can interject during Edwin's recruitment.
+  
+* (BGEE) Blackguards can be edgelords with Dorn.
+  
+* (BGEE) Thieves get a discount with Black Lily (not fully implemented yet). 
+
 ## FUTURE PLANS
 
 * (BG2EE) Add option for clerics of Lathander to recognize aspects of him in Amaunator. 
