@@ -1,8 +1,6 @@
 /*
-
-Let Rangers or Druids recognize what Guril Berries are then offer alternatives themselves
-
-*/
+  Let Rangers or Druids recognize what Guril Berries are then offer alternatives themselves
+                                                                                           */
 EXTEND_BOTTOM MURDGIRL 11
 + ~OR(2) Class(Player1,DRUID_ALL) Class(Player1,RANGER_ALL)~ + ~Guril Berries are often used in folk remedies. For salves and such.~ DO ~SetGlobal("TalkedToHooker1","GLOBAL",1) SetGlobal("BFSTalkedToRose","GLOBAL",1)~ + BFS.GurilBerries1
 END

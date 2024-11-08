@@ -9,12 +9,34 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 ## CHANGELOG
 
-* 20241031 - Nightly. 
-(BG2EE) Added option for druids and rangers to recognize Guril Berries and offer alternatives for Rose to consider.
+20241031 - Nightly. 
+
+* (BG2EE) Added option for druids and rangers to recognize Guril Berries and offer alternatives for Rose to consider.
+
+20241107 - Nightly
+
+* (BGEE) Druid / Ranger can talk down Rats with Reevor (currently crashing / not fully working).
+
+* (BGEE) Mage CHARNAME can call Tranzig out.
+
+* (BGEE) Blackguard, Berserker, Barbarian or Half-Orc CHARNAME can intimidate Karlat.
+
+* (BGEE) Bard CHARNAME can ask to perform at the Friendly Arm Inn (need to expand to other inns & BG2EE).
+
+* (BGEE) [4th wall] Elf & Half-Elf CHARNAME can ask Winthrop about his clean inn comment.
+
+20241108 - Nightly
+
+* (BGEE) Removed the ratties because they aren't playing nice. Reevor wins - for now.
+  
+* (BGEE) Wizard Slayers, Blackguards and Paladins can interject during Edwin's recruitment.
+  
+* (BGEE) Blackguards can be edgelords with Dorn.
+  
+* (BGEE) Thieves get a discount with Black Lily (not fully implemented yet). 
 
 ## FUTURE PLANS
 
-* (BG1EE) Add an option in the Feldepost Inn to proclaim you're also a mage. No more *'You're a mage? We don't want trouble with a mage!'* We have a mage too! It's duel time!
 * (BG2EE) Add option for clerics of Lathander to recognize aspects of him in Amaunator. 
 * (BG2EE) Add option, if the player has more than X amount of gold, to comment as such in the Mithrest Inn. The nobles will still look down on you but, hey, at least you're rich!
 
