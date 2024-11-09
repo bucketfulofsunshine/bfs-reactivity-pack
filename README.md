@@ -9,13 +9,11 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 ## CHANGELOG
 
-20241031 - Nightly. 
+#### 20241031 - Nightly. 
 
 * (BG2EE) Added option for druids and rangers to recognize Guril Berries and offer alternatives for Rose to consider.
 
-20241107 - Nightly
-
-* (BGEE) Druid / Ranger can talk down Rats with Reevor (currently crashing / not fully working).
+#### 20241107 - Nightly
 
 * (BGEE) Mage CHARNAME can call Tranzig out.
 
@@ -25,20 +23,41 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 * (BGEE) [4th wall] Elf & Half-Elf CHARNAME can ask Winthrop about his clean inn comment.
 
-20241108 - Nightly
+#### 20241108 - Nightly
 
-* (BGEE) Removed the ratties because they aren't playing nice. Reevor wins - for now.
-  
 * (BGEE) Wizard Slayers, Blackguards and Paladins can interject during Edwin's recruitment.
-  
-* (BGEE) Blackguards can be edgelords with Dorn.
-  
-* (BGEE) Thieves get a discount with Black Lily (not fully implemented yet). 
+
+* (BGEE) Blackguards may choose to be edgelords with Dorn.
+
+#### 20241109 - Nightly
+
+* (BGEE) Druids & Rangers have unique lines when recruiting Faldorn.
+
+* (BGEE) Druids, Rangers & Elves have unique lines during the Dryad of Cloak Peaks & Caldo interactions.
+
+* (BGEE) Thief CHARNAMEs have the option of calling Safana out during her recruitment scheme.
+
+* (BGEE) Paladins can persuade the Flaming Fist Mercenaries that they aren't bandits. Halflings can trick them. Half-Orcs, Berserkers, Blackguards and Barbarians can threaten them (with the appropriate loss of one reputation point).
+
+* (BGEE) Paladins can try to set Bardolan at ease (and fail, but hey, at least you tried).
+
+* (BGEE) Dark Moon Monks have unique lines about Viconia joining.
+
+* (BGEE) Dark Moon Monks can kill Rasaad - missing out on his quest and losing two reputation points in the process. Your choice. I might expand this to allow Rasaad to join, indicating this is trickery, and have CHARNAME betray later (near the other Dark Soul Monks) instead. [Version 2.0 or later.]
+
+* (BGEE) Sun Soul Monks can recognize what Rasaad is - and avoid his explanations. [Version 2.0] will have further reactivity through his RASAADJ dialogue (and quests).
+
+* (BGEE) Thieves can earn a discount with Black Lily in exchange for information. [Version 2.0] might expand this further by improving the discount if CHARNAME offers actual information. E.g. info on the Iron Throne's activities. For now it's the most basic implemented form imaginable. Say you'll offer information, she gives you a discount, nothing further happens.
+
+* (BGEE) IF CHARNAME isn't a mage, but another member of the party is, they can still challenge Tranzig to a magic duel. 
 
 ## FUTURE PLANS
 
 * (BG2EE) Add option for clerics of Lathander to recognize aspects of him in Amaunator. 
+
 * (BG2EE) Add option, if the player has more than X amount of gold, to comment as such in the Mithrest Inn. The nobles will still look down on you but, hey, at least you're rich!
+
+* (Multiple) Add suggestions from https://www.gibberlings3.net/forums/topic/38824-class-race-reactivity-pack/
 
 ## LICENSING
 
