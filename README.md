@@ -51,9 +51,15 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 * (BGEE) IF CHARNAME isn't a mage, but another member of the party is, they can still challenge Tranzig to a magic duel. 
 
-## FUTURE PLANS
+### 20241229 - Nightly 
 
-* (BG2EE) Add option for clerics of Lathander to recognize aspects of him in Amaunator. 
+* (BG2EE) Shamans can offer to help Wellyn's parents via dialogue.
+
+* (BG2EE) Clerics of Lathander can have a bonding moment with Amaunator. Because he seems a *little* familiar.
+
+* (BG2EE) Clerics or Paladins can sense a touch of divinity around Amaunator at the start of the dialogue. 
+
+## FUTURE PLANS
 
 * (BG2EE) Add option, if the player has more than X amount of gold, to comment as such in the Mithrest Inn. The nobles will still look down on you but, hey, at least you're rich!
 
