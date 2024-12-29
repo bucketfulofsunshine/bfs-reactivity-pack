@@ -1,4 +1,3 @@
-/*Shadows of Amn */
 /*
   Let Rangers or Druids recognize what Guril Berries are then offer alternatives themselves
                                                                                            */
@@ -21,7 +20,8 @@ CHAIN MURDGIRL BFS.GurilBerries3
 END
 IF ~~ EXIT
 
-EXTEND_TOP MERCHANT 2
+/* Ask Bel for the Items */ 
+EXTEND_TOP MERCHANT 2 /* not ideal to extend_top here, might break some interjections */ 
 + ~Global("BFSTalkedToRose","GLOBAL",1)~ + ~Do you have Guril Berries, Oak Bark and Solik Berries in stock?~ + BFS.GurilBerries4
 END
 
@@ -30,50 +30,37 @@ CHAIN MERCHANT BFS.GurilBerries4
 END
 IF ~~ EXIT
 
-
-/* Throne of Bhaal */ 
 /* 
-  Dwarves can defend their kin in Saradush 
-                                          */
-EXTEND_BOTTOM SARBUL01 1
-+ ~Race(Player1,DWARF)~ + ~Do you something against dwarves? If you pick a fight with them, you're also picking a fight with me!~ EXTERN SARBUL01 6
-END		
-
-/* 
-  Elves can defend their kin in Saradush 
-                                        */
-EXTEND_BOTTOM SARBUL05 0
-+ ~OR(2) Race(Player1,ELF) Race(Player1,HALF_ELF)~ + ~I won't allow you to threaten my kin. Leave us elves alone or face the wrath of a child of Bhaal!~ EXTERN SARBUL05 5
-END										 
-
-/* 
-  Paladins can tell Countess Santele in Saradush is lying 
-  Expand in V2.0 so Paladins can skip Errard 
-  and find Ardic by themselves after detecting his lies
-                                                         */ 
-EXTEND_BOTTOM SARCPT01 19
-+ ~Class(Player1,PALADIN) !Kit(Player1,Blackguard)~ + ~There is no justice in imprisoning Mateo without proof. I sensed something amiss with the Countess - she wasn't being wholly truthful.~ EXTERN SARCPT01 21
-END				
-
-EXTEND_BOTTOM SARCPT01 23
-+ ~Class(Player1,PALADIN) !Kit(Player1,Blackguard)~ + ~My vows compel me to investigate this case.~ EXTERN SARCPT01 24
-END													 
-
-EXTEND_BOTTOM SARMAT01 2
-+ ~Class(Player1,PALADIN) !Kit(Player1,Blackguard)~ + ~My name is <CHARNAME> and I seek to know the truth. Only then can true justice prevail. Countess Santele's words rang with falsehoods - perhaps you can offer some clarity?~ EXTERN SARMAT01 9
-END	 
-
-EXTEND_BOTTOM SARCNT01 4
-+ ~Class(Player1,PALADIN) !Kit(Player1,Blackguard)~ + ~I sense your deception, Countess Santele. Why would you implicate Mateo?~ DO ~SetGlobal("MateoJob","GLOBAL",1)~ EXTERN SARCNT01 6
-END	 
-
-EXTEND_BOTTOM SARKIS01 29
-+ ~Class(Player1,PALADIN) !Kit(Player1,Blackguard)~ + ~Your words ring with falsehoods. I can sense your deception.~ EXTERN SARKIS01 BFS.PaladinTruthSenseKis
-END	 
-
-CHAIN SARKIS01 BFS.PaladinTruthSenseKis
-~An unfortunate turn of events. I cannot lie to one such as you - but I still hold greater influence.~ 
+  Shaman can offer to assist Wellyn's parents
+                                             */ 
+EXTEND_TOP MOURNER6 2 /* not ideal to extend_top here, might break some interjections */ 
++ ~Class(Player1,SHAMAN) Global("BFSShamanOfferedAssist","LOCALS",0)~ + ~I have an affinity for talking with spirits. Perhaps I can be of some assistance?~ DO ~SetGlobal("BFSShamanOfferedAssist","LOCALS",1)~ + BFS.ShamanAssist
 END
-IF ~~ EXTERN SARKIS01 31
 
+CHAIN MOURNER6 BFS.ShamanAssist
+~Truly? We have nothing of value to offer stranger. Save our gratitude and the warmth of our harth.~
+= ~Wellyn's appeared to us at night. If you would help us, that's when you ought to seek him out.~ 
+END
+IF ~~ EXIT
+
+/* 
+  Clerics of Lathander can have a little bonding moment with Amaunator's avatar 
+  A little 4E nod, which won't be popular with everyone, but YOLO
+                                                                               */ 
+EXTEND_BOTTOM RIFTG03 4 
++ ~Kit(Player1,GODLATHANDER)~ + ~There is something almost familiar about you.~ + BFS.AmaunatorLathanderLink
+END																			   
+
+CHAIN RIFTG03 BFS.AmaunatorLathanderLink
+~Your presence draws a faint whisper of power. But you stoke an ember where I require a wildfire.~
+= ~Those outside follow no longer.~ 
+END
+IF ~~ EXTERN RIFTG03 5
+
+/* 
+  ANY Cleric or Paladin can sense a touch of the divine about Amaunator's avatar 
+                                                                     */
+EXTEND_BOTTOM RIFTG03 0 
++ ~Or(2) Class(Player1,PALADIN_ALL) Class(Player1,CLERIC_ALL)~ + ~I sense a touch of the divine. Who are you?~ EXTERN RIFTG03 1
+END																		 
 
