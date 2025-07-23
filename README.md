@@ -71,4 +71,4 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 ## CREDITS
 
-* A big thank you to *Kantz* for saving my files & sending them my back way so I could reuploaded them.
+* A big thank you to *Kantz* for saving my files & sending them back my way so I could reuploaded them.
