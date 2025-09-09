@@ -4,15 +4,15 @@ VERSION ~0.1~
 
 // Basic BGEE Reactivity Pack
 BEGIN ~BGEE Reactivity Pack~
-REQUIRE_PREDICATE GAME_IS ~bgee~ ~This mod requires BGEE~ 
+REQUIRE_PREDICATE GAME_IS ~bgee eet~ ~This mod requires BGEE or EET~ 
 COMPILE EVALUATE_BUFFER ~reactivitypack/d/bgee.d~
 
 // Silly BGEE Pack~
 BEGIN ~BGEE 4th Wall Breaking Reactivity Pack~
-REQUIRE_PREDICATE GAME_IS ~bgee~ ~This mod requires BGEE~ 
+REQUIRE_PREDICATE GAME_IS ~bgee eet~ ~This mod requires BGEE or EET~ 
 COMPILE EVALUATE_BUFFER ~reactivitypack/d/bgee4thwall.d~
 
 // Basic BG2EE Pack
 BEGIN ~BG2EE Reactivity Pack~
-REQUIRE_PREDICATE GAME_IS ~bg2ee~ ~This mod requires BG2EE~
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~This mod requires BG2EE or EET~
 COMPILE EVALUATE_BUFFER ~reactivitypack/d/bg2ee.d~
