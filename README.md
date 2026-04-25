@@ -47,10 +47,6 @@ A: I honestly don't know. I hope not. I'm not deleting any vanilla dialogue, eve
 
 * (BGEE) Dark Moon Monks have unique lines about Viconia joining.
 
-* (BGEE) Dark Moon Monks can kill Rasaad - missing out on his quest and losing two reputation points in the process. Your choice. I might expand this to allow Rasaad to join, indicating this is trickery, and have CHARNAME betray later (near the other Dark Soul Monks) instead. [Version 2.0 or later.]
-
-* (BGEE) Sun Soul Monks can recognize what Rasaad is - and avoid his explanations. [Version 2.0] will have further reactivity through his RASAADJ dialogue (and quests).
-
 * (BGEE) Thieves can earn a discount with Black Lily in exchange for information. [Version 2.0] might expand this further by improving the discount if CHARNAME offers actual information. E.g. info on the Iron Throne's activities. For now it's the most basic implemented form imaginable. Say you'll offer information, she gives you a discount, nothing further happens.
 
 * (BGEE) IF CHARNAME isn't a mage, but another member of the party is, they can still challenge Tranzig to a magic duel. 
