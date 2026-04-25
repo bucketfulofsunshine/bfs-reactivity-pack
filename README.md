@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://64.media.tumblr.com/92fef013a840bbdf9ac1ae4ea6413412/f83467379c46b182-a4/s540x810/89ff2fb1b307c7f251350d2dbc0bbefff8fcb3ed.pnj" />
+</p>
+
 # Reactivity Pack (for BGEE or BG2EE)
 I found Baldur's Gate 3's class and race reactions delightful. Yes, they are often only cosmetic, resulting in the line being phrased differently but having the same outcome. Yet these differences made each playthrough feel oddly distinct. Reactivity Pack is my attempt to add the same, on a much smaller scale, for BG1EE & BG2EE. 
 
