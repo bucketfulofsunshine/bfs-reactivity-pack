@@ -235,3 +235,109 @@ CHAIN BENTLY BFS.RPBentlyPerform
 DO ~GiveGoldForce(50) AddXPObject(Player1,200) RestParty()~ 
 EXIT
 
+/* 
+   RASAAD.D
+   Sun Soul monks recognize what Rasaad is and mention their own patron.
+   Dark Soul monks recognize him and can choose to kill him - avoiding his quest. 
+   Component will conflict with any Rasaad expansions. Might need adjustments.
+                                                                                 */
+EXTEND_BOTTOM RASAAD 1
++ ~Kit(Player1,SUN_SOUL)~ + ~A fellow follower of the Moonmaiden. May Selûne guide your steps through the night, and bring you safely into the new dawn.~ EXTERN RASAAD BFS.RPRASSELU
++ ~Kit(Player1,SUN_SOUL)~ + ~While I do not worship Selûne, we walk a similar path, brother.~ EXTERN RASAAD BFS.RPRASSUN
++ ~Kit(Player1,DARK_MOON)~ + ~Your presence offends my goddess, Shar. Say your prayers and face the dark embrace of the night.~ EXTERN RASAAD BFS.RPRASSHAR
+END
+
+CHAIN RASAAD BFS.RPRASSHAR
+~While I never seek out conflict, I will not shy away from it when threatened.~ DO ~ReputationInc(-2) Enemy()~ 
+EXIT
+
+CHAIN RASAAD BFS.RPRASSELU 
+~An unexpected surprise to find someone like you here but a welcome one nonetheless.~
+= ~My name is Rasaad. I was demonstrating the ways in which we Sun Soul monks reflect our spiritual light through physical activity. Though my audience has been less than...~
+END
+IF ~~ EXTERN RSCOMN01 0
+
+CHAIN RASAAD BFS.RPRASSUN
+~An unexpected surprise to find someone like you here but a welcome one. Who do you follow, <PRO_BROTHERSISTER>?~
+END
+++ ~Lathander.~ EXTERN RASAAD BFS.RPRASINTRO
+++ ~Sune.~ EXTERN RASAAD BFS.RPRASINTRO
+
+CHAIN RASAAD BFS.RPRASINTRO
+~Another worthy inheritor of Amaunator's legacy.~
+= ~My name is Rasaad. I was demonstrating the ways in which we Sun Soul monks reflect our spiritual light through physical activity. Though my audience has been less than...~
+END
+IF ~~ EXTERN RSCOMN01 0
+
+EXTEND_BOTTOM RSCOMN01 3
++ ~Kit(Player1,SUN_SOUL)~ + ~They don't recognize the dedication our path requires. Don't take their reactions to heart.~ EXTERN RASAAD BFS.RPRASCOM
+END
+
+CHAIN RASAAD BFS.RPRASCOM
+~Your presence soothes the wounds others would inflict with their words.~
+END
+++ ~Perhaps you'd like to join me? We can seek enlightenment together.~ EXTERN RASAAD 28
+++ ~I'm afraid I must be off. Be well, Rasaad.~ EXTERN RASAAD 29 
+
+EXTEND_BOTTOM RASAAD 5
++ ~Class(Player1,CLERIC_ALL) Alignment(Player1,MASK_GOOD)~ + ~I know your order well enough, brother.~ DO ~SetGlobal("RASAAD_FIRST_MEETING","LOCALS",2)~ EXTERN ~RSCOMN01~ 0
++ ~Kit(Player1,DARK_MOON)~ + ~I think not. Your goddess and mine have little to say to one another.~ DO ~SetGlobal("RASAAD_FIRST_MEETING","LOCALS",2)~ EXTERN ~RSCOMN01~ 0
+END
+
+EXTEND_BOTTOM RASAAD 22
++ ~Class(Player1,CLERIC_ALL) Alignment(Player1,MASK_GOOD)~ + ~Her light has been my guide since before I can remember. You speak our tenets well.~ EXTERN RASAAD 20
++ ~Kit(Player1,DARK_MOON)~ + ~Yet darkness endures regardless. Perhaps your light is not so absolute as you believe.~ EXTERN RASAAD 20
+END
+
+EXTEND_BOTTOM RASAAD 30
++ ~Class(Player1,MONK)~ + ~Your form is striking. I hadn't expected to find another monk in Nashkel. Who are you?~ DO ~SetGlobal("RASAAD_PLOT","GLOBAL",1)~ EXTERN RASAAD 2
+END
+
+/*
+   RASAADJ.D
+   More general Sun Soul & Dark Moon reactivity
+                                               */
+EXTEND_BOTTOM RASAADJ 1
++ ~Kit(Player1,SUN_SOUL)~ + ~Our ancient rivals. I recognized their technique the moment they moved.~ DO ~SetGlobal("DARK_MOON_AMBUSH_START","LOCALS",3)~ EXTERN RASAADJ BFS.RPRASJ1SUN
++ ~Kit(Player1,DARK_MOON)~ + ~I know. I recognized their style.~ DO ~SetGlobal("DARK_MOON_AMBUSH_START","LOCALS",3)~ EXTERN RASAADJ BFS.RPRASJ1DARK
+END
+
+CHAIN RASAADJ BFS.RPRASJ1SUN
+~One of the cult's principal goals is the eradication of the Sun Soul monks and all worshippers of Selûne. You and I are in grave danger, <CHARNAME>. They will not rest until their dark purposes eclipse our efforts. We must stop them.~
+END
+IF ~~ EXTERN RASAADJ 8
+
+CHAIN RASAADJ BFS.RPRASJ1DARK
+~You recognize it? ...Of course you would. Then you must know what their presence here means. What will you do with that knowledge, <CHARNAME>?~
+END
++ ~!NumInPartyGT(1)~ + ~Nothing that should concern you. My loyalty towards you hasn't changed.~ EXTERN RASAADJ 8
++ ~NumInPartyGT(1)~ + ~Nothing that should concern you. My loyalty towards you, towards every member of this party, hasn't changed.~ EXTERN RASAADJ 8
+// betrayal option here + ~Kit(Player1,DARK_MOON)~ + ~Perhaps I should speak with these monks myself. We share common cause.~ EXTERN RASAADJ BFS.RPRASJ15DARK
+
+EXTEND_BOTTOM RASAADJ 49
++ ~Kit(Player1,DARK_MOON)~ + ~You might say so. My goddess tends to cast one.~ DO ~SetGlobal("RASAAD_CDEV","LOCALS",1) SetGlobal("RASAAD_CDEV1_MONK","LOCALS",1)~ EXTERN RASAADJ BFS.RPRASJ49DARK
++ ~Kit(Player1,SUN_SOUL)~ + ~My inner light burns no differently from yours, Rasaad.~ DO ~SetGlobal("RASAAD_CDEV","LOCALS",1) SetGlobal("RASAAD_CDEV1_MONK","LOCALS",1)~ EXTERN RASAADJ 53
+END
+
+CHAIN RASAADJ BFS.RPRASJ49DARK
+~I sometimes forget the path you walk. I meant no offense, <CHARNAME>.~
+END
+IF ~~ EXTERN RASAADJ 53
+
+EXTEND_BOTTOM RASAADJ 91
++ ~Class(Player1,MONK)~ + ~Training your the whole self, not just the arm that holds your weapon.~ EXTERN RASAADJ BFS.RPRASJ91MONK
+END
+
+CHAIN RASAADJ BFS.RPRASJ91MONK
+~Exactly so. I imagine your order trained in a similar way.~
+END
+IF ~~ EXTERN RASAADJ 95
+
+EXTEND_BOTTOM RASAADJ 102
++ ~Kit(Player1,DARK_MOON)~ + ~I can tell you what Shar offers. Not only power but freedom from the weight of expectation. Some people turn to the dark precisely because the light demands so much.~ EXTERN RASAADJ BFS.RPRASJ102DARK
+END
+
+CHAIN RASAADJ BFS.RPRASJ102DARK
+~Freedom from the weight of... Yes. The expectations of the monastery weighed heavily on Gamaz always. He strove so hard. Perhaps too hard. Thank you for your honesty, <CHARNAME>. It is not easy to hear, but I am grateful for it.~
+END
+IF ~~ EXTERN RASAADJ 106
